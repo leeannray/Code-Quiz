@@ -27,62 +27,63 @@
                     <a class="nav-link" href="index.html">Retake Quiz<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="highscore.html">High Scores</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link" href="./highscore.html">High Scores</a>
                 </li>
                 <li class="nav-item">
                     <div class="timer">Time: <span id="time">0</span></div>
+                    <!--Timer (above) included at end of nav bar-->
                 </li>
             </ul>
         </div>
     </nav>
+
     <div class="container" style="padding: 50px;">
 
-    <div class="jumbotron" id="start-screen">
+    <!--Home page-->
+    <div class="jumbotron" id="homeScreen">
         <h1 class="display-3">Hello, coders!</h1>
         <p class="lead">Welcome to the coding quiz challenge!</p>
         <hr class="my-4">
         <p>Try to answer the following code-related questions before the clock strikes zero!
         Keep in mind that incorrect answers will penalize your
         score by deducting 10 seconds from the clock! Good luck!</p>
-        <div id="start-screen" class="start">
+        <div id="homeScreen" class="start">
             <button id="start">Start Quiz</button>
         </div>
     </div>
 
-        <div id="questions" class="hide">
-            <h2 id="question-title"></h2>
-            <div id="choices" class="choices"></div>
-        </div>
-
-        <div id="end-screen" class="hide">
-            <h2>Finished!</h2>
-            <p>Your score is <span id="final-score"></span>.</p>
-            <form>
-                <fieldset>
-                    <legend>Save Your Score</legend>
-                    <div class="form-group row">
-                    <label for="initials" class="col-sm-2 col-form-label">Enter Your Initials: </label>
-                    <div class="col-sm-10">
-                    <input type="text" class="form-control-plaintext" value="Your initials here" id="initials" max="3">
-                    <a href="highscore.html">
-                    <button type="button" class="btn btn-primary" id="submit">Submit</button></a>
-                    </div>
-                    </div>
-                </fieldset>
-            </form>
-        </div>
-
-        <div id="feedback" class="feedback hide"></div>
-
-        <div></div>
+    <!--Questions page-->
+    <div id="questions" class="hide">
+        <h2 id="questionTitle"></h2>
+        <div id="choices" class="choices"></div>
     </div>
-</div>
+
+    <!--Page when quiz ends-->
+    <div id="doneScreen" class="hide">
+        <h2>Finished!</h2>
+        <p>Your score is <span id="finalScore"></span>.</p>
+        <form>
+            <fieldset>
+                <legend>Save your score!</legend>
+                <div class="form-group row">
+                <label for="initials" class="col-sm-2 col-form-label">Enter Your Initials: </label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control-plaintext" value="Your initials here" id="initials" max="3">
+                        <a href="./highscore.html"><button type="button" class="btn btn-primary" id="submit">Submit</button></a>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+
+    <!--Div for correct/incorrect feedback to user-->
+    <div id="assess" class="assess hide"></div>
+        <div></div>
+    
+    </div>
 
     <script src="./assets/questions.js"></script>
     <script src="./assets/logic.js"></script>
-</body>
 
+</body>
 </html>

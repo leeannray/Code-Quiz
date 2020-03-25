@@ -50,3 +50,44 @@ Acceptance Criteria:
 
 3. Questions/Answers
     - Create an array with a couple easy sample questions and answer choices either in your game logic or in a separate file just for the array.
+
+Start Game
+- When game starts
+    - Home page is not displayed
+    - Questions page is displayed
+    - Timer (90 seconds) is displayed
+    - Timer starts (counts down by 1 second)
+    - Question is displayed to user
+
+Quiz
+- Created an array of objects made up of key value pairs for question prompt, answer choices, and correct answer
+    - Answer choices are array
+    - Assigned to variable
+- Update question (clear previous question)
+- Update answer choices (clear previous answer choices)
+    - Create a loop to generate new choices (within array of answer choices)
+- Display question and choices
+    - Display choices with button that user can click
+    - If incorrect choice (choice not equal to answer from questions array)
+        - Deduct 10 seconds from timer
+        - Display another question
+        - Display feedback
+    - If user chooses correctly
+        - Display feedback
+        - Next question displayed
+    - Store answers
+- When time is zero or no questions remaining
+    - Display "end" page
+    - Display user score
+    - Display input form for user to save initials and score
+    - Button to submit info and directs to high scores page
+- High scores page
+    - Displays all user scores in table
+    - Table is updated everytime user saves score with initials
+    - Table sorted from high score to lowest score
+    - Option to clear scores
+- Nav bar with appropriate links to: high scores page or home (to retake quiz)
+- NOTE: 
+    - made 2 html files (one for home page and one for high score page)
+    - made 2 javascript pages (one for the overall dynamic functionality of game and one for saving/storing/displaying high scores)
+    - used CSS page to determine when pages are displayed or hidden
