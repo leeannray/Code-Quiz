@@ -2,7 +2,7 @@
 function displayHighScores() {
 
     // Retrieve scores from localstorage or create empty array
-    var highscores = JSON.parse(window.localStorage.getItem("highscores")) || [];
+    var highScores = JSON.parse(window.localStorage.getItem("highscores")) || [];
 
     // Sort the highscores by score property from highest to lowest
     highScores.sort(function (a, b) {
