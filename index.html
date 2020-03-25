@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Coding Quiz</title>
+    
+    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/cyborg/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-l7xaoY0cJM4h9xh1RfazbgJVUZvdtyLWPueWNtLAphf/UbBgOVzqbOTogxPwYLHM" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./assets/style.css" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">Code Quiz</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02"
+            aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarColor02">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Retake Quiz<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="highscore.html">High Scores</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <div class="timer">Time: <span id="time">0</span></div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container" style="padding: 50px;">
+
+    <div class="jumbotron" id="start-screen">
+        <h1 class="display-3">Hello, coders!</h1>
+        <p class="lead">Welcome to the coding quiz challenge!</p>
+        <hr class="my-4">
+        <p>Try to answer the following code-related questions before the clock strikes zero!
+        Keep in mind that incorrect answers will penalize your
+        score by deducting 10 seconds from the clock! Good luck!</p>
+        <div id="start-screen" class="start">
+            <button id="start">Start Quiz</button>
+        </div>
+    </div>
+
+        <div id="questions" class="hide">
+            <h2 id="question-title"></h2>
+            <div id="choices" class="choices"></div>
+        </div>
+
+        <div id="end-screen" class="hide">
+            <h2>Finished!</h2>
+            <p>Your score is <span id="final-score"></span>.</p>
+            <form>
+                <fieldset>
+                    <legend>Save Your Score</legend>
+                    <div class="form-group row">
+                    <label for="initials" class="col-sm-2 col-form-label">Enter Your Initials: </label>
+                    <div class="col-sm-10">
+                    <input type="text" class="form-control-plaintext" value="Your initials here" id="initials" max="3">
+                    <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+                    </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+
+        <div id="feedback" class="feedback hide"></div>
+    </div>
+</div>
+
+    <script src="./assets/questions.js"></script>
+    <script src="./assets/logic.js"></script>
+</body>
+
+</html>
