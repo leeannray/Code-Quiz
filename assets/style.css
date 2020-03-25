@@ -41,4 +41,8 @@ la.timer {
   color: white;
 }
 
+.assess hide {
+  display: none;
+}
+
 

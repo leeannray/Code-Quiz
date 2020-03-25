@@ -92,10 +92,10 @@ function startQuiz() {
     timerEl.textContent = time;
 
     // Call on function to display question from questions array 
-    nextQuestion();
+    getQuestion();
 }
 
-function nextQuestion() {
+function getQuestion() {
     // Retrieve question object from array
     var currentQuestion = questions[currentQuestionIndex];
 
@@ -147,7 +147,7 @@ function questionClick() {
     assessEl.setAttribute("class", "assess");
     setTimeout(function () {
         assessEl.setAttribute("class", "assess hide");
-    }, 500);
+    }, 1000);
 
     // Change to next question
     currentQuestionIndex++;
